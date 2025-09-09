@@ -68,6 +68,30 @@ def load_any(input_path:str):
     raise SystemExit(f"Could not parse input JSON: {e}")
 
 def normalize(x:dict)->dict:
+  # Extract content from nested structure if present
+  content = x.get("content", {})
+  
+  # Get question stem from various possible locations
+  stem_html = (x.get("stem_html") or 
+               x.get("stem") or 
+               x.get("question_html") or
+               content.get("stem") or
+               content.get("stimulus") or
+               "")
+  
+  # Get choices from various locations
+  choices = (x.get("choices") or 
+             x.get("options") or
+             content.get("choices") or
+             content.get("options"))
+  
+  # Get explanation from various locations  
+  explanation = (x.get("explanation_html") or 
+                 x.get("explanation") or
+                 content.get("rationale") or
+                 content.get("explanation") or
+                 "")
+  
   return {
     "uId": x.get("uId") or x.get("id") or x.get("questionId"),
     "questionId": x.get("questionId") or x.get("id") or x.get("uId"),
@@ -77,10 +101,10 @@ def normalize(x:dict)->dict:
     "skill_desc": x.get("skill_desc") or "",
     "difficulty": x.get("difficulty") or x.get("diff") or "",
     "score_band_range_cd": x.get("score_band_range_cd") or x.get("band"),
-    "stem_html": x.get("stem_html") or x.get("stem") or x.get("question_html") or "",
-    "choices": x.get("choices") or x.get("options"),
+    "stem_html": stem_html,
+    "choices": choices,
     "correct_choice_index": x.get("correct_choice_index") if isinstance(x.get("correct_choice_index"), int) else x.get("answer_index"),
-    "explanation_html": x.get("explanation_html") or x.get("explanation") or "",
+    "explanation_html": explanation,
   }
 
 def build_lookup(items):
