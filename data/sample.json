@@ -1,0 +1,59 @@
+[
+  {
+    "uId": "q-0001",
+    "questionId": "MATH-001",
+    "module": "math",
+    "primary_class_cd_desc": "Algebra",
+    "skill_cd": "H.C.",
+    "skill_desc": "Linear equations in two variables",
+    "difficulty": "M",
+    "score_band_range_cd": 5,
+    "stem_html": "<p>Solve for <em>x</em>: 3x + 7 = 25</p>",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "9"
+    ],
+    "correct_choice_index": 2,
+    "explanation_html": "<p>Subtract 7 from both sides: 3x=18, so x=6. But careful! We misread. 25 \u2212 7 = 18, 18/3 = 6, so the correct answer is <strong>6</strong>. Update key accordingly to 2 (0-indexed).</p>"
+  },
+  {
+    "uId": "q-0002",
+    "questionId": "RW-101",
+    "module": "reading-writing",
+    "primary_class_cd_desc": "Words in Context",
+    "skill_cd": "CAS",
+    "skill_desc": "Conventions of Standard English",
+    "difficulty": "E",
+    "score_band_range_cd": 3,
+    "stem_html": "<p>Choose the best replacement for the underlined portion: <br> She <u>don't</u> like broccoli.</p>",
+    "choices": [
+      "does not",
+      "do not",
+      "didn't",
+      "isn't"
+    ],
+    "correct_choice_index": 0,
+    "explanation_html": "<p>Subject-verb agreement: 'She' takes 'does not'.</p>"
+  },
+  {
+    "uId": "q-0003",
+    "questionId": "MATH-102",
+    "module": "math",
+    "primary_class_cd_desc": "Advanced Math",
+    "skill_cd": "H.Q.",
+    "skill_desc": "Quadratic equations",
+    "difficulty": "H",
+    "score_band_range_cd": 7,
+    "stem_html": "<p>The solutions to x\u00b2 \u2212 5x + 6 = 0 are:</p>",
+    "choices": [
+      "x=2,3",
+      "x=\u22122,\u22123",
+      "x=\u22122,3",
+      "x=2,\u22123"
+    ],
+    "correct_choice_index": 0,
+    "explanation_html": "<p>Factor: (x\u22122)(x\u22123)=0 \u21d2 x=2,3.</p>"
+  }
+]

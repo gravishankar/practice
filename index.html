@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAT Question Bank — Static</title>
+  <meta name="description" content="SAT practice questions with filters, search, and progress — no backend.">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">
+      <div class="logo"></div>
+      <div class="name">SAT Question Bank</div>
+    </div>
+    <div class="controls">
+      <button class="button" id="shuffleBtn" title="Random practice (R)"><span class="kbd">R</span> Random</button>
+      <button class="button brand" id="reviewBtn" title="Review starred (S)"><span class="kbd">S</span> Starred</button>
+    </div>
+  </nav>
+
+  <div class="container grid">
+    <aside class="card">
+      <h3 style="margin-top:0">Filters</h3>
+      <label>Search</label>
+      <input class="input" id="q" placeholder="equations, context, quadratic… ( / )">
+      <div style="height:8px"></div>
+
+      <label>Module</label>
+      <select id="f_module" class="select">
+        <option value="">Any</option>
+        <option value="math">Math</option>
+        <option value="reading-writing">Reading &amp; Writing</option>
+      </select>
+      <div style="height:8px"></div>
+
+      <label>Domain</label>
+      <input class="input" id="f_domain" placeholder="Algebra, Words in Context…">
+      <div style="height:8px"></div>
+
+      <label>Difficulty</label>
+      <select id="f_diff" class="select">
+        <option value="">Any</option>
+        <option value="E">Easy</option>
+        <option value="M">Medium</option>
+        <option value="H">Hard</option>
+      </select>
+
+      <div style="height:14px"></div>
+      <button class="button" id="resetBtn">Reset</button>
+    </aside>
+
+    <main class="card">
+      <div id="results" class="list"></div>
+      <div id="pager" style="margin-top:14px;display:flex;gap:8px">
+        <button class="button" id="prevPage">Prev</button>
+        <div class="badge" id="pageInfo">1 / 1</div>
+        <button class="button" id="nextPage">Next</button>
+      </div>
+    </main>
+  </div>
+
+  <div class="container">
+    <p class="footer">No server required — works on GitHub Pages. Progress & starred items are saved in your browser.</p>
+  </div>
+
+  <div id="toast"></div>
+</body>
+</html>

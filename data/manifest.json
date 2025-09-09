@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "count": 2017,
+  "chunks": [
+    {
+      "path": "chunks/part-000.json",
+      "count": 1000
+    },
+    {
+      "path": "chunks/part-001.json",
+      "count": 1000
+    },
+    {
+      "path": "chunks/part-002.json",
+      "count": 17
+    }
+  ]
+}

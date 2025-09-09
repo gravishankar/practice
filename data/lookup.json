@@ -1,0 +1,53 @@
+{
+  "module": [
+    "english",
+    "math"
+  ],
+  "domain": [
+    "Advanced Math",
+    "Algebra",
+    "Craft and Structure",
+    "Expression of Ideas",
+    "Geometry and Trigonometry",
+    "Information and Ideas",
+    "Problem-Solving and Data Analysis",
+    "Standard English Conventions"
+  ],
+  "difficulty": [
+    "E",
+    "H",
+    "M"
+  ],
+  "skill": [
+    "Area and volume",
+    "Boundaries",
+    "Central Ideas and Details",
+    "Circles",
+    "Command of Evidence",
+    "Cross-Text Connections",
+    "Cross-text Connections",
+    "Equivalent expressions",
+    "Evaluating statistical claims: Observational studies and experiments ",
+    "Form, Structure, and Sense",
+    "Inference from sample statistics and margin of error ",
+    "Inferences",
+    "Linear equations in one variable",
+    "Linear equations in two variables",
+    "Linear functions",
+    "Linear inequalities in one or two variables",
+    "Lines, angles, and triangles",
+    "Nonlinear equations in one variable and systems of equations in two variables ",
+    "Nonlinear functions",
+    "One-variable data: Distributions and measures of center and spread",
+    "Percentages",
+    "Probability and conditional probability",
+    "Ratios, rates, proportional relationships, and units",
+    "Rhetorical Synthesis",
+    "Right triangles and trigonometry",
+    "Systems of two linear equations in two variables",
+    "Text Structure and Purpose",
+    "Transitions",
+    "Two-variable data: Models and scatterplots",
+    "Words in Context"
+  ]
+}

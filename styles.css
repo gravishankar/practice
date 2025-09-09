@@ -1,0 +1,58 @@
+
+/* Minimal, modern theme for high school audience (sleek, not kiddish) */
+:root{
+  --bg: #0b1020;
+  --card: #111a2b;
+  --muted: #94a3b8;
+  --text: #e5e7eb;
+  --brand: #7c3aed; /* violet-600 */
+  --accent: #22d3ee; /* cyan-400 */
+  --ring: #60a5fa; /* blue-400 */
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+  background: radial-gradient(1200px 800px at 80% -10%, #1f2a44, var(--bg));
+  color:var(--text);
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.nav{
+  display:flex;gap:14px;align-items:center;justify-content:space-between;
+  padding:16px 20px;border-bottom:1px solid #1e293b;background:rgba(17, 24, 39, 0.6);backdrop-filter: blur(6px);
+  position:sticky;top:0;z-index:50
+}
+.brand{display:flex;gap:10px;align-items:center}
+.brand .logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--accent))}
+.brand .name{font-weight:700;letter-spacing:.4px}
+.kbd{border:1px solid #1f2937;background:#0b1220;padding:4px 6px;border-radius:6px;color:#cdd7e0}
+.grid{display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005));
+  border:1px solid #1f2a44;border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.25)
+}
+.controls{display:flex;gap:10px;flex-wrap:wrap}
+.input, .select{
+  width:100%;padding:10px 12px;border-radius:10px;border:1px solid #24324d;background:#0b1220;color:#d9e2ec;
+  outline:none
+}
+.input:focus, .select:focus{box-shadow:0 0 0 3px var(--ring)}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;border:1px solid #253454;color:#cbd5e1;font-size:12px}
+.button{
+  padding:10px 14px;border-radius:12px;border:1px solid #24324d;background:#0b1220;color:#e5e7eb;cursor:pointer
+}
+.button.brand{background:linear-gradient(90deg,var(--brand),var(--accent));border-color:transparent;color:#0b1020;font-weight:700}
+.list{display:grid;gap:12px}
+.item{padding:14px;border:1px solid #24324d;border-radius:14px;background:rgba(10, 16, 28, 0.7)}
+.item:hover{border-color:#36558f}
+.item .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.item .stem{line-height:1.5}
+.choices{display:grid;gap:8px;margin-top:10px}
+.choice{border:1px solid #263145;border-radius:10px;padding:10px;cursor:pointer}
+.choice.correct{border-color:#16a34a}
+.choice.incorrect{border-color:#dc2626}
+.footer{color:#94a3b8;text-align:center;padding:24px 0}
+#toast{position:fixed;bottom:18px;right:18px;background:#0b1220;border:1px solid #24324d;padding:10px 14px;border-radius:10px;display:none}
