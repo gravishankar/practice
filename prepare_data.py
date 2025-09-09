@@ -67,6 +67,18 @@ def load_any(input_path:str):
   except Exception as e:
     raise SystemExit(f"Could not parse input JSON: {e}")
 
+def normalize_module(module_str):
+  """Normalize module values to match frontend expectations"""
+  if not module_str:
+    return "reading-writing"
+  module_str = str(module_str).lower()
+  if module_str in ["math", "mathematics"]:
+    return "math"
+  elif module_str in ["english", "reading", "writing", "reading-writing", "rw"]:
+    return "reading-writing"
+  else:
+    return "reading-writing"  # default
+
 def normalize(x:dict)->dict:
   # Extract content from nested structure if present
   content = x.get("content", {})
@@ -95,7 +107,7 @@ def normalize(x:dict)->dict:
   return {
     "uId": x.get("uId") or x.get("id") or x.get("questionId"),
     "questionId": x.get("questionId") or x.get("id") or x.get("uId"),
-    "module": x.get("module") or ("math" if "math" in (x.get("category","").lower()) else "reading-writing"),
+    "module": normalize_module(x.get("module") or ("math" if "math" in (x.get("category","").lower()) else "reading-writing")),
     "primary_class_cd_desc": x.get("primary_class_cd_desc") or x.get("domain") or "",
     "skill_cd": x.get("skill_cd") or "",
     "skill_desc": x.get("skill_desc") or "",
