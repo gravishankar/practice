@@ -45,7 +45,7 @@ async function loadManifest(){
 async function loadAllChunks(manifest){
   const arrays = [];
   for(const c of manifest.chunks){
-    const res = await fetch(c.path);
+    const res = await fetch(`data/${c.path}`);
     const arr = await res.json();
     arrays.push(...arr);
   }
